@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아로의 영어 놀이터</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #FFF9F1;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .app {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+
+    .header {
+      margin-bottom: 28px;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 8px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 15px #00000008;
+    }
+
+    .day {
+      color: #FF8B6A;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 12px 0;
+    }
+
+    .description {
+      color: #777;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .sentence {
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .english {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .korean {
+      color: #888;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .play {
+      background: #FFE8D6;
+      color: #A65C3C;
+      margin-top: 16px;
+    }
+
+    .complete {
+      background: #FF9C80;
+      color: white;
+    }
+
+    .complete.done {
+      background: #75BDA7;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="header">
+      <div class="subtitle">AR0 ENGLISH PLAY</div>
+      <h1>아로의 영어 놀이터 🌈</h1>
+      <p class="subtitle">엄마와 매일 5~10분, 즐겁게!</p>
+    </header>
+
+    <section class="card">
+      <div class="day">DAY 01</div>
+      <h2>Open Shut Them 👏</h2>
+      <p class="description">
+        손을 펴고 오므리며 영어로 놀아요!
+      </p>
+
+      <button class="play" onclick="openSong()">
+        ▶ 오늘의 노래 듣기
+      </button>
+    </section>
+
+    <section class="card">
+      <div class="day">TODAY'S ENGLISH</div>
+      <h2>엄마가 말해요 💬</h2>
+
+      <div class="sentence">
+        <div class="english">Open your hands!</div>
+        <div class="korean">손을 펴봐!</div>
+      </div>
+
+      <div class="sentence">
+        <div class="english">Close your hands!</div>
+        <div class="korean">손을 오므려 봐!</div>
+      </div>
+    </section>
+
+    <button
+      id="completeButton"
+      class="complete"
+      onclick="completeDay()"
+    >
+      ✓ 오늘 놀이 완료하기
+    </button>
+
+  </main>
+
+  <script>
+    function openSong() {
+      window.open(
+        "https://supersimple.com/song/open-shut-them/",
+        "_blank"
+      );
+    }
+
+    function completeDay() {
+      const button =
+        document.getElementById("completeButton");
+
+      button.textContent = "♥ 오늘도 즐겁게 놀았어요!";
+      button.classList.add("done");
+    }
+  </script>
+</body>
+</html>
